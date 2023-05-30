@@ -13,7 +13,7 @@ const ProductItem = ({ item }) => {
 
     return (
         <div className="product-item border hover:shadow-lg rounded-lg
-        cursor-pointer transition-all select-none " onClick={handleClick}>
+        cursor-pointer transition-all select-none overflow-scroll" onClick={handleClick}>
             <div className="product-img">
                 <img
                     src={item.img}
