@@ -30,7 +30,7 @@ function Header({ setSearch }) {
 
     return (
         <div className='border-b mb-6'>
-            <header className='py-4 px-6 flex justify-between items-center gap-10'>
+            <header className='py-4 px-6 flex md:justify-between justify-around items-center gap-10'>
                 <div className="logo">
                     <Link to="/">
                         <h2 className='text-2xl font-bold md:text-4xl'>

@@ -10,6 +10,10 @@ body {
   font-family: 'Electrolize', 'sans-serif';
   @apply bg-gray-50
 }
+.menu-link .anticon {
+  display: flex;
+  justify-content:  center;
+}
 
 .ant-btn-primary {
   background-color: #1677ff;
@@ -20,10 +24,7 @@ body {
     overflow: hidden;
   }
 
-  .menu-link .anticon {
-    display: flex;
-    justify-content:  center;
-  }
+
 
   .categories::-webkit-scrollbar {
     display: none;

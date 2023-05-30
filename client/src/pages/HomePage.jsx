@@ -47,7 +47,7 @@ const HomePage = () => {
             {
                 products && categories ? (
                     <div className="home px-6 flex md:flex-row justify-between gap-10 flex-col pb-24 md:pb-0 h-screen">
-                        <div className="categories max-h-[calc(100vh_-_112px)] md:pb-10">
+                        <div className="categories min-h-[150px] max-h-[calc(100vh_-_112px)] md:pb-10 overflow-scroll">
                             <Categories
                                 categories={categories}
                                 setCategories={setCategories}
@@ -55,7 +55,7 @@ const HomePage = () => {
                                 products={products}
                             />
                         </div>
-                        <div className="products flex-[8] max-h-[calc(100vh_-_112px)]  min-h-[500px]">
+                        <div className="products flex-[8] min-h-screen max-h-[calc(100vh_-_112px)] overflow-scroll">
                             <Products
                                 categories={categories}
                                 filtered={filtered}
@@ -64,7 +64,7 @@ const HomePage = () => {
                                 search={search}
                             />
                         </div>
-                        <div className="cart-wrapper min-w-[300px] md:visible invisible md:-mt-[24px] border ">
+                        <div className="cart-wrapper min-w-[300px] md:visible invisible md:-mt-[24px] border border-b-2">
                             <CartTotals />
                         </div>
                     </div>

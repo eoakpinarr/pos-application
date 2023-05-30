@@ -3,8 +3,8 @@ import Header from "../components/Header/Header";
 import { useRef, useState } from "react";
 import CreateBill from "../components/Cart/CreateBill";
 import { useDispatch, useSelector } from 'react-redux'
-import { increase, decrease } from '../redux/cartSlice'
-import { MinusCircleOutlined, PlusCircleOutlined, SearchOutlined } from '@ant-design/icons'
+import { increase, decrease, reset } from '../redux/cartSlice'
+import { ClearOutlined, MinusCircleOutlined, PlusCircleOutlined, SearchOutlined } from '@ant-design/icons'
 import { deleteCart } from "../redux/cartSlice";
 import Highlighter from 'react-highlight-words';
 
@@ -196,6 +196,7 @@ const CartPage = () => {
               }}
 
             />
+            
           </div>
         )
       },
@@ -281,6 +282,23 @@ const CartPage = () => {
               disabled={cart.cartItems.length === 0}
             >
               Sipariş Oluştur
+            </Button>
+            <Button
+              type='primary'
+              size='large'
+              className='w-full mt-2 flex justify-center items-center'
+              icon={<ClearOutlined />}
+              danger
+              disabled={cart.cartItems?.length === 0}
+              onClick={() => {
+                if (window.confirm("Emin misiniz ?")) {
+                  dispatch(reset())
+                  message.success("Sepet Başarıyla Temizlendi.")
+                }
+              }}
+
+            >
+              Temizle
             </Button>
           </Card>
         </div>

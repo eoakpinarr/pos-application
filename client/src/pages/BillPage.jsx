@@ -186,6 +186,7 @@ const BillPage = () => {
           >
             Yazdır
           </Button>
+          
         )
       }
     },
