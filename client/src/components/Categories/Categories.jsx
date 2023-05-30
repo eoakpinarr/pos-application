@@ -22,7 +22,7 @@ const Categories = ({ categories, setCategories, setFiltered, products }) => {
             {
                 categories.map((item) => (
                     <li
-                        className={`category-item ${item.title === categoryTitle && "!bg-pink-900"}`}
+                        className={`category-item ${item.title === categoryTitle && "!bg-pink-900"}  border rounded-lg`}
                         key={item._id}
                         onClick={() => setCategoryTitle(item.title)}
                     >
@@ -31,13 +31,13 @@ const Categories = ({ categories, setCategories, setFiltered, products }) => {
                 ))
             }
             <li
-                className='category-item !bg-orange-700 hover:opacity-90'
+                className='category-item !bg-orange-700 hover:opacity-90 border rounded-lg'
                 onClick={() => setIsAddModalOpen(true)}
             >
                 <PlusOutlined className="md:text-2xl" />
             </li>
             <li
-                className='category-item !bg-[#BDC3C7] hover:opacity-90'
+                className='category-item !bg-[#BDC3C7] hover:opacity-90  border rounded-lg'
                 onClick={() => setIsEditModalOpen(true)}
             >
                 <EditOutlined className="md:text-2xl" />

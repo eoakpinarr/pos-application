@@ -12,13 +12,13 @@ const ProductItem = ({ item }) => {
     }
 
     return (
-        <div className="product-item border hover:shadow-lg 
-        cursor-pointer transition-all select-none" onClick={handleClick}>
+        <div className="product-item border hover:shadow-lg rounded-lg
+        cursor-pointer transition-all select-none " onClick={handleClick}>
             <div className="product-img">
                 <img
                     src={item.img}
                     alt=""
-                    className="h-28 w-full object-contain bg-white border-b"
+                    className="h-28 w-full object-contain bg-white border-b rounded-t-lg"
                 />
             </div>
             <div className="product-info flex flex-col p-3">
